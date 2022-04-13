@@ -18,9 +18,10 @@ In git, history of editing are comprised of **commits** == **snpashots** of the 
   - Does not tell
 - In contrast, `git diff --staged` (or `--cached`) tells you what modifications are STAGED and to be added to the next commit
 
-## Reset
+## Unstage a file
 
-- `git reset` unstage everything from the staging area
+1. `git reset HEAD <file>`, or `git reset HEAD` for all staged files
+2. (Since version 2.23.0) `git restore --staged <path>`
 
 ## Remove a file from git
 
