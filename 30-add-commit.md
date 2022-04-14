@@ -15,7 +15,6 @@ In git, history of editing are comprised of **commits** == **snpashots** of the 
 ## Diff
 
 - `git diff` tells you the details of UNSTAGED modification line-by-line.
-  - Does not tell
 - In contrast, `git diff --staged` (or `--cached`) tells you what modifications are STAGED and to be added to the next commit
 
 ## Unstaging files
