@@ -18,13 +18,6 @@ In git, history of editing are comprised of **commits** == **snpashots** of the 
   - Does not tell
 - In contrast, `git diff --staged` (or `--cached`) tells you what modifications are STAGED and to be added to the next commit
 
-<<<<<<< HEAD
-## Unstage a file
-
-1. `git reset HEAD <file>`, or `git reset HEAD` for all staged files
-2. (Since version 2.23.0) `git restore --staged <path>`
-
-=======
 ## Unstaging files
 
 1. `git reset HEAD <file>` for specific file, or `git reset HEAD` for all files
@@ -32,7 +25,6 @@ In git, history of editing are comprised of **commits** == **snpashots** of the 
 
 - `git restore` is an alternative to `git reset` in general; more on that in later notes
 
->>>>>>> b725e24 (Add undoing changes notes)
 ## Remove a file from git
 
 - To both remove a file in your local system and tell git to record the file deletion in the editing history:
