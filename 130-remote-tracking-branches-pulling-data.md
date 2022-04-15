@@ -31,7 +31,7 @@
 
 ## `git pull`
 
-`git pull` combines both `fetch` and `merge`/`rebase` (more on `rebase` later) that we have done above, aiming to provide an up-to-date branch that has the same name as that on the remote. Also setting up the upstream as the remote branch.
+`git pull` combines both `fetch` and `merge` (or `rebase`; more on rebase later) that we have done above, aiming to provide an up-to-date branch that has the same name as that on the remote. Also setting up the upstream as the remote branch.
 
 - `git clone` does all the things from a `git pull` but also adds the `origin` remote for you and set all branches' push & pull default branches to that of the equivalent inside the cloned remote
 
