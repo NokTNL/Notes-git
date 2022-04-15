@@ -49,7 +49,4 @@
 ## Deleting a branch
 
 - When you no longer need a branch (e.g. all changes are merged into `main`), you can delete it by `git branch -d <name>`.
-
-```
-
-```
+  - **!!!** Deleting a branch that is NOT merged will be rejected by git.
