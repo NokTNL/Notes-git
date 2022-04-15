@@ -22,3 +22,7 @@
   - Note: switching branches may point to a diffrent commit and will have immediate effect on the work directory shown
 - When making a commit in a branch, _both the HEAD and the branch pointer will move to new newest commit_ while other branch pointers remains unchanged.
 - **!!!** Switching to another branch when there are uncomitted changes in the current branch will be rejected in git. You can work around it with e.g. stashing; more on that later.
+
+### Extra commands
+
+`git log --all`: shows commits in ALL branches (usually only show commites traceable from the current branch only)
