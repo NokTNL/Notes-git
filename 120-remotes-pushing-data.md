@@ -19,7 +19,7 @@ To upload a certain branch to a remote: `git push <remote> <branch>`
   2. Nobody has pushed before you. If someone has pushed before you (i.e. your local version is not up to date), you need to `git fetch` + merge (or `git pull`) from the remote first; more on that later
 - You can control what name on the server the branch should be, e.g. `git push origin boring-name:awesome-name`
 
-- If you will always push a local branch to a certain remote branch, you can set its **upstream branch**: `git push --set-upstream <remote> <branch>`
+- If you will always push a local branch to a certain remote branch, you can set its **upstream branch**: `git push --set-upstream <remote> <branch>` or `git push -u <remote> <branch>`
   - Next time you are on that branching and pushing, you can simply run `git push` without the need to state the remote and branch names
 
 ## Deleting a remote branch

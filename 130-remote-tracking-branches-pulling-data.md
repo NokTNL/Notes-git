@@ -22,7 +22,7 @@
   - This has added advantage that it also set `feature` to be the **tracking branch** of `origin/feature`, and the tracked branch is called its **upstream branch**.
   - Upstream branch is relavant to `git pull`: if you run `git pull` inside the local `feature` branch now, git already knows its upstream so will fetch & merge from `origin/feature` automatically. (More on `git pull` below)
 
-- Shorthand of `git checkout -b feature origin/feature` --> `git checkout --track origin/feature`
+- **Shorthand of `git checkout -b feature origin/feature` --> `git checkout --track origin/feature`**
 
   - Can be _further_ shortened to just `git checkout feature` to create a new tracking branch, _given_ there is no such local branch existing yet and there's only one remote branch matching this name
 
@@ -31,7 +31,16 @@
 
 ## `git pull`
 
-`git pull` combines both `fetch` and `merge` (or `rebase`; more on rebase later) that we have done above, aiming to provide an up-to-date branch that has the same name as that on the remote. Also setting up the upstream as the remote branch.
+- **!! It is safest to use when there is a branch that has its upstream set up already, e.g. by `git checkout --track <remote>/<branch>` or `git clone`**
+
+- `git pull` acts on the current branch. It `fetch` _AND_ `merge` your curent branch into the remote branch you specified.
+  - or `rebase` as an alternative to `merge`; more on rebase later
+
+### Example
+
+- e.g. When you are on the `main` branch and you run `git pull origin feature`, it will merge your local `main` branch into the remote-tracking `origin/feature` branch
+  - **This does not set up a local `feature` branch for you!!** To do that, follow the standard `git fetch origin` then `git checkout --track origin/feature`
+- e.g. You are on the `feature` branch that has its upstream set up as `origin/feature`, then simply run `git pull` without stating remote/branch. Git will then merge the latest changes from the remote `origin/feature` branch automatically
 
 - `git clone` does all the things from a `git pull` but also adds the `origin` remote for you and set all branches' push & pull default branches to that of the equivalent inside the cloned remote
 
